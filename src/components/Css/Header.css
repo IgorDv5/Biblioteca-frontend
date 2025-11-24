@@ -1,0 +1,62 @@
+.header {
+  background: #0c1017;
+  padding: 15px 30px;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.header-logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+
+.header-login-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-login-icon {
+  font-size: 34px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+}
