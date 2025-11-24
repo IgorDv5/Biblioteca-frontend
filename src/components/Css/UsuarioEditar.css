@@ -1,0 +1,68 @@
+/* UsuarioEditar.css */
+.usuario-editar-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.usuario-editar-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.usuario-editar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.usuario-editar-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.usuario-editar-form input {
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #2c2c3f;
+  color: #fff;
+}
+
+.usuario-editar-form input:focus {
+  background-color: #3a3a55;
+}
+
+.usuario-editar-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffcc00;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.usuario-editar-form button:hover {
+  background-color: #e6b800;
+  transform: scale(1.03);
+}
+
+.mensagem {
+  margin-top: 15px;
+  text-align: center;
+  color: #ff6666;
+  font-weight: bold;
+}

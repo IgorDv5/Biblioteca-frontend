@@ -6,6 +6,10 @@ import Home from "../components/Home";
 import Perfil from "../components/Perfil";
 import Livro from "../components/Livro";
 import Devolucao from "../components/Devolucao";
+import AdminUsuario from "../components/UsuarioList";
+import UsuarioEditar from "../components/UsuarioEditar";
+import UsuarioCadastrarLivro from "../components/UsuarioCadastrarLivro";
+
 
 function AppRoutes() {
   const location = useLocation();
@@ -47,6 +51,9 @@ function AppRoutes() {
         <Route path="/perfil" element={<Perfil user={user} />} />
         <Route path="/livros" element={<Livro user={user} />} />
         <Route path="/devolucao" element={<Devolucao user={user} />} />
+        <Route path="/admin_usuario" element={<AdminUsuario user={user} />} />
+        <Route path="/usuarios/editar/:id" element={<UsuarioEditar user={user} />} />
+        <Route path="/usuario_cadastrar_livro" element={<UsuarioCadastrarLivro user={user} />} />
       </Routes>
     </>
   );

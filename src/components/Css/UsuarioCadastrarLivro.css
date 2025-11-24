@@ -1,0 +1,62 @@
+.cadastrar-livro-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+}
+
+.cadastrar-livro-container h2 {
+  text-align: center;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.cadastrar-livro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastrar-livro-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.cadastrar-livro-form input,
+.cadastrar-livro-form select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.cadastrar-livro-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00ff40;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cadastrar-livro-form button:hover {
+  background-color: #055a25;
+}
+
+.mensagem {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #4caf50;
+}
