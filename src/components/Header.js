@@ -24,8 +24,9 @@ export default function Header({ user, onLogout }) {
           {user ? (
             <>
               <Link to="/perfil">Perfil</Link>
-              {<Link to="/admin">DashBord Admin</Link>}
-                {user && <span className="user-name">Olá, {user.nome}</span>}
+              {<Link to="/admin_usuario">Gerenciar Usuarios</Link>}
+              {<Link to="/admin_livro">Gerenciar Livros</Link>}
+              {user && <span className="user-name">Olá, {user.nome}</span>}
               <button className="logout-btn" onClick={onLogout}>Sair</button>            
             </>
           ) : (

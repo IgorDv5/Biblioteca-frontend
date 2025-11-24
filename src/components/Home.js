@@ -18,13 +18,13 @@ export default function Home() {
   <div className="card">
     <h3>Cadastre seu livro para empréstimo</h3>
     <p>Realize empréstimos facilmente usando o sistema.</p>
-    <Link to="/novo-livro" className="card-btn">Emprestar</Link>
+    <Link to="/usuario_cadastrar_livro" className="card-btn">Emprestar</Link>
   </div>
 
   <div className="card">
     <h3>Devolver</h3>
     <p>Controle e faça devoluções de livros rapidamente.</p>
-    <Link to="/devolver" className="card-btn">Devolver</Link>
+    <Link to="/devolucao" className="card-btn">Devolver</Link>
   </div>
 
 </div>
