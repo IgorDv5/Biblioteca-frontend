@@ -1,0 +1,85 @@
+.home-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 40px 5%;
+  background: #0e0e0e;   /* fundo escuro */
+  color: #fff;
+}
+
+.home-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* =============================== */
+/*        GRID DE CARDS            */
+/* =============================== */
+
+.cards-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* =============================== */
+/*             CARD                */
+/* =============================== */
+
+.card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 25px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px #6c63ff55;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card p {
+  color: #aaaaaa;
+  line-height: 1.5;
+}
+
+/* =============================== */
+/*      BOTÃO DE AÇÃO (OPCIONAL)   */
+/* =============================== */
+
+.card-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  background: #6c63ff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #8b83ff;
+}
+
+/* =============================== */
+/*      RESPONSIVIDADE             */
+/* =============================== */
+
+@media (max-width: 480px) {
+  .home-title {
+    text-align: center;
+  }
+}

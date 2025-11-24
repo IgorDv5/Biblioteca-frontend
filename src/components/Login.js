@@ -1,41 +1,32 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Css/Login.css";
-import { API_BASE } from "../config/config";
+import api from "../services/api";
 
 export default function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const res = await fetch(`${API_BASE}/auth/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha })
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const data = await res.json();
-    if (!res.ok) throw data;
+    try {
+      const res = await api.post("/auth/login", { email, senha }); 
 
-    onLogin({
-      user: data.user,
-      token: data.token
-    });
-
-  } catch (err) {
-    console.error(err);
-    alert(err.erro || "Erro ao logar");
-  }
-};
-
-
+      onLogin({
+        user: res.data.user,
+        token: res.data.token
+      });
+    } catch (err) {
+      console.error(err);
+      const message = err.response?.data?.erro || err.response?.data?.message || "Erro ao logar";
+      alert(message);
+    }
+  };
 
   return (
     <div className="login-container">
       <form className="login-box" onSubmit={handleSubmit}>
-
         <h1>Entrar</h1>
 
         <div className="input-group">

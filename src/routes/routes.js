@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Login from "../components/Login";
+import Home from "../components/Home";
+import Livro from "../components/Livro";
 
 function AppRoutes() {
   const location = useLocation();
@@ -9,24 +11,18 @@ function AppRoutes() {
 
   const [user, setUser] = useState(null);
 
-  // 🔥 Carregar usuário salvo ao iniciar
   useEffect(() => {
     const saved = localStorage.getItem("userData");
-    if (saved) {
-      setUser(JSON.parse(saved));
-    }
+    if (saved) setUser(JSON.parse(saved));
   }, []);
 
-  // 🔥 LOGIN
   const handleLogin = (data) => {
     setUser(data.user);
     localStorage.setItem("userData", JSON.stringify(data.user));
     localStorage.setItem("token", data.token);
-
     navigate("/");
   };
 
-  // 🔥 LOGOUT
   const handleLogout = () => {
     localStorage.removeItem("userData");
     localStorage.removeItem("token");
@@ -38,13 +34,15 @@ function AppRoutes() {
 
   return (
     <>
-      {!hideHeaderOn.includes(location.pathname) &&
-        <Header user={user} onLogout={handleLogout} />}
+      {!hideHeaderOn.includes(location.pathname) && (
+        <Header user={user} onLogout={handleLogout} />
+      )}
 
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home user={user} />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/registro" element={<h1>Registro</h1>} />
+        <Route path="/livros" element={<Livro user={user} />} />
       </Routes>
     </>
   );
