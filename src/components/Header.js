@@ -19,15 +19,14 @@ export default function Header({ user, onLogout }) {
             <Link to="/">Livros</Link>
             <Link to="/">Emprestar</Link>
             <Link to="/">Devolver</Link>
-             <Link to="/">Sobre nós</Link>
-             <Link to="/">DashBord Admin</Link>
 
           {user ? (
             <>
               <Link to="/perfil">Perfil</Link>
               <Link to="/novo-livro">Cadastrar Livro</Link>
-              {user.isAdmin && <Link to="/admin">Admin</Link>}
-              <button className="logout-btn" onClick={onLogout}>Sair</button>
+              {user.isAdmin && <Link to="/admin">DashBord Admin</Link>}
+                {user && <span className="user-name">Olá, {user.nome}</span>}
+              <button className="logout-btn" onClick={onLogout}>Sair</button>            
             </>
           ) : (
             <Link to="/login" className="login-box">
