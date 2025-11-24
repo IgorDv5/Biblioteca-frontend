@@ -16,6 +16,7 @@ export default function Header({ user, onLogout }) {
 
         {}
         <nav className="header-nav">
+          <Link to="/">Home</Link>
             <Link to="/livros">Livros</Link>
             <Link to="/usuario_cadastrar_livro">Cadastrar Livro</Link>
             <Link to="/devolucao">Devolver</Link>
