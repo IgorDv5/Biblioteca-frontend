@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import "./Css/UsuarioList.css";
+import { FaPlus } from "react-icons/fa";
+
+
 
 export default function Admin({ user }) {
   const [usuarios, setUsuarios] = useState([]);
@@ -49,7 +52,12 @@ export default function Admin({ user }) {
 
   return (
     <div className="admin-container">
-      <h2>Usuários do Sistema</h2>
+      <div className="admin-header">
+  <h2>Usuários do Sistema</h2>
+  <button className="novo-usuario-btn" onClick={() => navigate("/usuarios_cadastrar")}>
+    <FaPlus /> Novo Usuário
+  </button>
+</div>
       <div className="table-wrapper">
         <table className="usuarios-table">
           <thead>

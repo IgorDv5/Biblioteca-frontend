@@ -1,0 +1,76 @@
+/* Cadastro.css */
+
+.cadastro-container {
+  height: 100vh;
+  background: #0f1624;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.cadastro-box {
+  background: #111827;
+  width: 380px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.cadastro-box h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cadastro-box .input-group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.cadastro-box .input-icon {
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.cadastro-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: white;
+}
+
+.cadastro-box .cadastro-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.cadastro-box .cadastro-btn:hover {
+  background: #2563eb;
+}
+
+.cadastro-box .login-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+.cadastro-box .login-text a {
+  color: #60a5fa;
+  font-weight: bold;
+}

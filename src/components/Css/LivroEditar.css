@@ -1,0 +1,70 @@
+/* LivroEditar.css */
+.livro-editar-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.livro-editar-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.livro-editar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.livro-editar-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.livro-editar-form input,
+.livro-editar-form select {
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #2c2c3f;
+  color: #fff;
+}
+
+.livro-editar-form input:focus,
+.livro-editar-form select:focus {
+  background-color: #3a3a55;
+}
+
+.livro-editar-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.livro-editar-form button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
+
+.mensagem {
+  margin-top: 15px;
+  text-align: center;
+  color: #ff6666;
+  font-weight: bold;
+}
