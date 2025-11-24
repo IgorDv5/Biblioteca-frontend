@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Login from "../components/Login";
 import Home from "../components/Home";
 import Livro from "../components/Livro";
+import Devolucao from "../components/Devolucao";
 
 function AppRoutes() {
   const location = useLocation();
@@ -43,6 +44,7 @@ function AppRoutes() {
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/registro" element={<h1>Registro</h1>} />
         <Route path="/livros" element={<Livro user={user} />} />
+        <Route path="/devolucao" element={<Devolucao user={user} />} />
       </Routes>
     </>
   );

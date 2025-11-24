@@ -17,14 +17,13 @@ export default function Header({ user, onLogout }) {
         {}
         <nav className="header-nav">
             <Link to="/livros">Livros</Link>
-            <Link to="/">Emprestar</Link>
-            <Link to="/">Devolver</Link>
+            <Link to="/">Cadastrar Livro</Link>
+            <Link to="/devolucao">Devolver</Link>
 
           {user ? (
             <>
               <Link to="/perfil">Perfil</Link>
-              <Link to="/novo-livro">Cadastrar Livro</Link>
-              {user.isAdmin && <Link to="/admin">DashBord Admin</Link>}
+              {<Link to="/admin">DashBord Admin</Link>}
                 {user && <span className="user-name">Olá, {user.nome}</span>}
               <button className="logout-btn" onClick={onLogout}>Sair</button>            
             </>
